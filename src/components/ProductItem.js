@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Product from "./Product";
 import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const ProductItem = ({ product, onAddToCartClicked }) => (
   <div className="card" style={{ marginBottom: 20 }}>
@@ -21,6 +22,11 @@ const ProductItem = ({ product, onAddToCartClicked }) => (
         disabled={!(product.inventory > 0)}
       >
         {product.inventory > 0 ? "Add to cart" : "Sold Out"}
+      </Button>
+      <Button className="ml-5" color="primary">
+        <Link className="text-white" to={`/products/${product.id}`}>
+          Details
+        </Link>
       </Button>
     </div>
   </div>

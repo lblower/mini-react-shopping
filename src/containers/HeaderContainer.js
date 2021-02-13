@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import {
   Collapse,
   Nav,
@@ -21,21 +20,16 @@ export const HeaderNav = () => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto" navbar>
           <NavItem>
-            <NavLink>
-              <Link to="/">Products</Link>
-            </NavLink>
+            <NavLink to="/">Products</NavLink>
+            {/* <Link to="/">Products</Link> */}
           </NavItem>
           <NavItem>
-            <NavLink>
-              <Link to="/cart">Cart</Link>
-            </NavLink>
+            <NavLink to="/cart">Cart</NavLink>
           </NavItem>
         </Nav>
         <Nav className="pull-right mr-auto" navbar>
           <NavItem className="pull-right">
-            <NavLink>
-              <Link to="/login">Login</Link>
-            </NavLink>
+            <NavLink to="/login">Login</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
